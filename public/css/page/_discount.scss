@@ -1,0 +1,13 @@
+.discount {
+    padding-top: 200px;
+    a {
+        color: #2F2F2F;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .discount {
+        padding-top: 100px;
+    }
+}
