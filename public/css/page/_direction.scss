@@ -4,8 +4,8 @@
         border: 0;
         color: #fff;
         padding: 0;
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         margin: 0 10px;
         border-radius: 50%;
         &.active {
@@ -134,4 +134,13 @@
     #directionTab {
         margin-bottom: 40px;
     }
+}
+
+@media screen and (max-width:414px) {
+    #directionTab {
+        .nav-link {
+            width: 70px;
+            height: 70px;
+        }
+    } 
 }

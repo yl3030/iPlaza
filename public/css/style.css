@@ -596,7 +596,7 @@ footer .bottom a {
   position: absolute;
   width: calc(50% - 100px);
   height: 2px;
-  background-color: #D9D0C9;
+  background-color: #d9d0c9;
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -608,7 +608,7 @@ footer .bottom a {
   position: absolute;
   width: calc(50% - 100px);
   height: 2px;
-  background-color: #D9D0C9;
+  background-color: #d9d0c9;
   right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -618,7 +618,7 @@ footer .bottom a {
 .home-title h2 {
   width: 200px;
   text-align: center;
-  border: 2px solid #D9D0C9;
+  border: 2px solid #d9d0c9;
   border-radius: 100px;
   font-size: 24px;
   font-weight: 500;
@@ -642,6 +642,12 @@ footer .bottom a {
   .banner .big-banner .pic {
     padding-bottom: 100%;
   }
+  .banner .arrow {
+    width: 70px;
+  }
+  .banner .arrow.swiper-button-prev {
+    left: calc(50vw - 200px);
+  }
   .home-title {
     margin-bottom: 30px;
   }
@@ -655,6 +661,15 @@ footer .bottom a {
   }
   .home-title::after {
     width: calc(50% - 75px);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .banner .arrow {
+    width: 50px;
+  }
+  .banner .arrow.swiper-button-prev {
+    left: calc(50vw - 150px);
   }
 }
 
@@ -988,6 +1003,10 @@ footer .bottom a {
   line-height: 1.8;
 }
 
+.floor-map .store {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1200px) {
   .brand-detail {
     padding: 30px;
@@ -1034,8 +1053,8 @@ footer .bottom a {
   border: 0;
   color: #fff;
   padding: 0;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin: 0 10px;
   border-radius: 50%;
 }
@@ -1166,6 +1185,13 @@ footer .bottom a {
   }
 }
 
+@media screen and (max-width: 414px) {
+  #directionTab .nav-link {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -1198,11 +1224,13 @@ footer .bottom a {
   width: calc(100% - 60px);
   border: 0;
   border-radius: 30px;
+  padding: 15px;
 }
 
 .contact-form .form-box .title-box {
   width: calc(100% - 60px);
   padding-top: 8px;
+  line-height: 1;
 }
 
 .contact-form .form-box .title-box .check-box {
@@ -1212,41 +1240,52 @@ footer .bottom a {
   cursor: pointer;
 }
 
-.contact-form .form-box .title-box .check-box .check {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #552E23;
-  display: inline-block;
-  margin-right: 3px;
-  vertical-align: middle;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+.contact-form .form-box .title-box .check-box .radio-box {
+  width: 18px;
+  height: 18px;
   background-color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
 }
 
-.contact-form .form-box .title-box .check-box .check i {
-  font-size: 14px;
-  text-align: center;
-  line-height: 20px;
-  display: block;
+.contact-form .form-box .title-box .check-box .radio-box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #552E23;
+  top: 0;
+  left: 0;
+}
+
+.contact-form .form-box .title-box .check-box .radio-box::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #552E23;
+  border-radius: 50%;
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  color: #fff;
 }
 
-.contact-form .form-box .title-box .check-box span {
+.contact-form .form-box .title-box .check-box .radio-box.active::before {
+  opacity: 1;
+}
+
+.contact-form .form-box .title-box .check-box label {
   vertical-align: middle;
   display: inline-block;
-  margin-bottom: 3px;
-}
-
-.contact-form .form-box .title-box .check-box.active .check {
-  background-color: #552E23;
-}
-
-.contact-form .form-box .title-box .check-box.active .check i {
-  opacity: 1;
+  width: auto;
+  padding-top: 0;
+  padding-bottom: 2px;
 }
 
 .contact-form .form-box .vertify {
@@ -1286,11 +1325,12 @@ footer .bottom a {
   vertical-align: middle;
 }
 
-.contact-form .btn-box {
+.contact-form .form-box .btn-box {
   margin-top: 60px;
+  width: calc(100% - 60px);
 }
 
-.contact-form .btn-box button {
+.contact-form .form-box .btn-box button {
   margin: 0 10px;
   padding: 8px 30px;
   border-radius: 8px;

@@ -95,6 +95,12 @@
     }
 }
 
+.floor-map {
+    .store {
+        cursor: pointer;
+    }
+}
+
 @media screen and (max-width:1200px) {
     .brand-detail {
         padding: 30px;
