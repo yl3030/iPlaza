@@ -55,6 +55,25 @@
                 }
             }
         }
+        &-title {
+            position: relative;
+            span {
+                text-align: center;
+                display: block;
+            }
+            i {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: 0.3s;
+            }
+            &.active {
+                i {
+                    transform: translateY(-50%)rotate(90deg);
+                }
+            }
+        }
     }
     &-detail {
         background-color: #fff;

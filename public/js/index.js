@@ -18,3 +18,8 @@ $(".check-box").click(function(){
     $(".check-box").children(".radio-box").removeClass("active")
     $(this).children(".radio-box").addClass("active");
 })
+
+$(".brand-list-title").click(function(){
+    $(this).toggleClass("active");
+    $(".brand-list").slideToggle(300);
+})

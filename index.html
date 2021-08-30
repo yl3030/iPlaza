@@ -67,53 +67,62 @@
         <div class="swiper-container big-banner">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="pic pb_50p">
+              <div class="pic">
                 <img src="./public/img/home_banner_1.png" />
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="pic pb_50p">
+              <div class="pic">
                 <img src="./public/img/home_banner_2.png" />
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="pic pb_50p">
+              <div class="pic">
                 <img src="./public/img/home_banner_3.png" />
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="pic pb_50p">
+              <div class="pic">
                 <img src="./public/img/home_banner_4.png" />
               </div>
             </div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
         <div class="swiper-container small-banner position-absolute">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="pic">
-                <img src="./public/img/home_banner_1.png" />
-              </div>
+              <a href="#">
+                <div class="pic">
+                  <img src="./public/img/home_banner_1.png" />
+                </div>
+              </a>
             </div>
             <div class="swiper-slide">
-              <div class="pic">
-                <img src="./public/img/home_banner_2.png" />
-              </div>
+              <a href="#">
+                <div class="pic">
+                  <img src="./public/img/home_banner_2.png" />
+                </div>
+              </a>
             </div>
             <div class="swiper-slide">
-              <div class="pic">
-                <img src="./public/img/home_banner_3.png" />
-              </div>
+              <a href="#">
+                <div class="pic">
+                  <img src="./public/img/home_banner_3.png" />
+                </div>
+              </a>
             </div>
             <div class="swiper-slide">
-              <div class="pic">
-                <img src="./public/img/home_banner_4.png" />
-              </div>
+              <a href="#">
+                <div class="pic">
+                  <img src="./public/img/home_banner_4.png" />
+                </div>
+              </a>
             </div>
           </div>
         </div>
         <div class="swiper-button-next arrow"></div>
-        <div class="swiper-button-prev arrow"></div>
+        <!-- <div class="swiper-button-prev arrow"></div> -->
       </div>
 
       <!-- 愛優惠 -->
@@ -339,10 +348,14 @@
         loop: true,
         // spaceBetween: 10,
         slidesPerView: 1,
-        allowTouchMove:false,
+        // allowTouchMove:false,
         autoplay: {
           delay: 3000,
           disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
         // navigation: {
         //   nextEl: ".swiper-button-next",
@@ -353,7 +366,7 @@
         loop: true,
         spaceBetween: 10,
         slidesPerView: 3,
-        allowTouchMove: false,
+        // allowTouchMove: false,
         // initialSlide:1,
         // freeMode: true,
         // watchSlidesProgress: true,
@@ -363,11 +376,11 @@
         },
         navigation: {
           nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          // prevEl: ".swiper-button-prev",
         },
-        thumbs: {
-          swiper: swiper2,
-        },
+        // thumbs: {
+        //   swiper: swiper2,
+        // },
       });
     </script>
   </body>
